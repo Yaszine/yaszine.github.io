@@ -1,43 +1,91 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0d1b2a;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d1b2a; /* Dark background */
     color: #e0e1dd;
     margin: 0;
     padding: 20px;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: #00bfff; /* Electric Blue */
+    text-align: center;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-.highlight {
-    color: #00ff7f;
+/* Animated Text */
+.animated-text {
+    color: #00bfff;
+    font-weight: bold;
+    height: 2rem;
+    overflow: hidden;
+}
+
+/* Social Icons */
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .social-icons a {
     color: #778da9;
-    text-decoration: none;
-    margin-right: 15px;
+    margin: 0 10px;
+    font-size: 2rem;
+    transition: color 0.3s ease;
 }
 
+.social-icons a:hover {
+    color: #00bfff;
+}
+
+/* Project Section */
 .projects {
-    margin-top: 20px;
+    margin-top: 40px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    background-color: #1b263b;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+    color: #00bfff;
 }
 
 .project button {
     background-color: #415a77;
     color: #e0e1dd;
-    padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    padding: 10px 15px;
     cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
 }
 
 .project p {
-    margin: 10px 0;
+    margin: 0;
+}
+
+/* Hover Effects */
+.project button:hover {
+    background-color: #00bfff;
+    color: #0d1b2a;
 }
