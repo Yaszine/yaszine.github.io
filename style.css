@@ -36,6 +36,10 @@ body {
   font-size: 1.8rem;
   font-weight: bold;
   color: #00bfff;
+  text-decoration: underline;
+  text-decoration-color: #00bfff; /* Electric blue */
+  text-decoration-thickness: 3px; /* Customize thickness */
+  text-underline-offset: 5px; /* Distance of underline from text */
 }
 
 /* Demos Section */
