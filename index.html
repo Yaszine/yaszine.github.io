@@ -1,84 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Yassine Ben Jemaa</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Header -->
-        <h1>Yassine Ben Jemaa</h1>
-        
-        <!-- Animated Subtitle -->
-        <p class="animated-text">
-            I'm <span id="changing-text"></span>
-        </p>
+  <!-- Background -->
+  <div class="background">
+    <!-- Header Section -->
+    <section class="intro">
+      <h1 class="title">Welcome to My Portfolio</h1>
+      <div class="animated-text">
+        <span class="text"></span>
+      </div>
+    </section>
 
-        <!-- Social Icons -->
-        <div class="social-icons">
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:example@email.com"><i class="fas fa-envelope"></i></a>
+    <!-- Demos Section -->
+    <section class="demos">
+      <h2 class="section-title">Demos</h2>
+      <div class="demo-container">
+        <!-- Demo 1 -->
+        <div class="demo-card">
+          <i class="fas fa-cloud-sun icon"></i>
+          <div class="demo-info">
+            <h3>Weather Web App</h3>
+            <p>A VueJS webApp - Vue3, TypeScript, Vuetify, Pinia, Local Storage, IndexedDB, MiniSearch</p>
+          </div>
         </div>
 
-        <!-- Projects -->
-        <h2>Projects</h2>
-        <div class="projects">
-            <!-- Project 1 -->
-            <div class="project">
-                <i class="fas fa-cloud-sun project-icon"></i>
-                <button>Weather Web App</button>
-                <p>A VueJS webApp - Vue3, TypeScript, Vuetify, Pinia, Local Storage, IndexedDB, MiniSearch</p>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project">
-                <i class="fas fa-subway project-icon"></i>
-                <button>Subway System</button>
-                <p>Node.js Backend API - TypeScript, Express.js, Prism ORM, Neo4j, Postgres, Docker & Docker Compose</p>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project">
-                <i class="fas fa-rocket project-icon"></i>
-                <button>Go HTTP Load Tester</button>
-                <p>Go Lang SRE tool - Go routines, Go channels, Go Ticker, Command line flags, Docker & Docker Compose</p>
-            </div>
+        <!-- Demo 2 -->
+        <div class="demo-card">
+          <i class="fas fa-subway icon"></i>
+          <div class="demo-info">
+            <h3>Subway System</h3>
+            <p>Node.js Backend API - TypeScript, Express.js, Prism ORM, Neo4j, Postgres, Docker & Docker Compose</p>
+          </div>
         </div>
-    </div>
 
-    <!-- Custom JS -->
-    <script>
-        const phrases = ["AI Enthusiast", "Freelance in Machine Learning", "Tech Explorer"];
-        let index = 0;
-        const changingText = document.getElementById("changing-text");
+        <!-- Demo 3 -->
+        <div class="demo-card">
+          <i class="fas fa-server icon"></i>
+          <div class="demo-info">
+            <h3>Go http load tester</h3>
+            <p>Go Lang SRE tool - Go routines, Go channels, Go Ticker, Command line flags, Docker & Docker Compose</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-        function animateText() {
-            let currentText = phrases[index];
-            changingText.textContent = "";
-            let charIndex = 0;
+  <!-- JS for animated text -->
+  <script>
+    const textArray = ["AI Enthusiast", "Freelance in Machine Learning"];
+    let textPosition = 0;
+    let arrayIndex = 0;
 
-            const typeEffect = setInterval(() => {
-                if (charIndex < currentText.length) {
-                    changingText.textContent += currentText[charIndex];
-                    charIndex++;
-                } else {
-                    clearInterval(typeEffect);
-                    setTimeout(() => {
-                        changingText.textContent = "";
-                        index = (index + 1) % phrases.length;
-                        animateText();
-                    }, 1500); // Pause before disappearing
-                }
-            }, 100);
-        }
+    function typeEffect() {
+      const textElement = document.querySelector('.text');
+      const currentText = textArray[arrayIndex];
 
-        animateText();
-    </script>
+      if (textPosition < currentText.length) {
+        textElement.innerHTML += currentText.charAt(textPosition);
+        textElement.style.color = "#00bfff"; // Electric blue
+        textPosition++;
+        setTimeout(typeEffect, 100);
+      } else {
+        setTimeout(eraseEffect, 1500);
+      }
+    }
+
+    function eraseEffect() {
+      const textElement = document.querySelector('.text');
+      if (textElement.innerHTML.length > 0) {
+        textElement.innerHTML = textElement.innerHTML.slice(0, -1);
+        setTimeout(eraseEffect, 50);
+      } else {
+        textPosition = 0;
+        arrayIndex = (arrayIndex + 1) % textArray.length;
+        setTimeout(typeEffect, 500);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(typeEffect, 500);
+    });
+  </script>
 </body>
 </html>
