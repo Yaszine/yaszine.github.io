@@ -3,35 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Akhil Surapuram</title>
+    <title>Portfolio | Yassine Ben Jemaa</title>
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Main Container -->
     <div class="container">
-        <h1>Akhil Surapuram</h1>
-        <p>I'm <span class="highlight">AI Enthusiast</span></p>
+        <!-- Header -->
+        <h1>Yassine Ben Jemaa</h1>
+        
+        <!-- Animated Subtitle -->
+        <p class="animated-text">
+            I'm <span id="changing-text"></span>
+        </p>
 
+        <!-- Social Icons -->
         <div class="social-icons">
-            <a href="https://linkedin.com">LinkedIn</a>
-            <a href="https://github.com">GitHub</a>
-            <a href="mailto:example@email.com">Email</a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:example@email.com"><i class="fas fa-envelope"></i></a>
         </div>
 
-        <h2>Demos</h2>
+        <!-- Projects -->
+        <h2>Projects</h2>
         <div class="projects">
+            <!-- Project 1 -->
             <div class="project">
+                <i class="fas fa-cloud-sun project-icon"></i>
                 <button>Weather Web App</button>
                 <p>A VueJS webApp - Vue3, TypeScript, Vuetify, Pinia, Local Storage, IndexedDB, MiniSearch</p>
             </div>
+
+            <!-- Project 2 -->
             <div class="project">
+                <i class="fas fa-subway project-icon"></i>
                 <button>Subway System</button>
                 <p>Node.js Backend API - TypeScript, Express.js, Prism ORM, Neo4j, Postgres, Docker & Docker Compose</p>
             </div>
+
+            <!-- Project 3 -->
             <div class="project">
-                <button>Go http load tester</button>
+                <i class="fas fa-rocket project-icon"></i>
+                <button>Go HTTP Load Tester</button>
                 <p>Go Lang SRE tool - Go routines, Go channels, Go Ticker, Command line flags, Docker & Docker Compose</p>
             </div>
         </div>
     </div>
+
+    <!-- Custom JS -->
+    <script>
+        const phrases = ["AI Enthusiast", "Freelance in Machine Learning", "Tech Explorer"];
+        let index = 0;
+        const changingText = document.getElementById("changing-text");
+
+        function animateText() {
+            let currentText = phrases[index];
+            changingText.textContent = "";
+            let charIndex = 0;
+
+            const typeEffect = setInterval(() => {
+                if (charIndex < currentText.length) {
+                    changingText.textContent += currentText[charIndex];
+                    charIndex++;
+                } else {
+                    clearInterval(typeEffect);
+                    setTimeout(() => {
+                        changingText.textContent = "";
+                        index = (index + 1) % phrases.length;
+                        animateText();
+                    }, 1500); // Pause before disappearing
+                }
+            }, 100);
+        }
+
+        animateText();
+    </script>
 </body>
 </html>
