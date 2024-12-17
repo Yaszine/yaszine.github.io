@@ -96,21 +96,20 @@ body {
 .social-links {
   display: flex;
   justify-content: center; /* Center horizontally */
-  gap: 20px; /* Space between icons */
-  margin-top: 20px; /* Space below the header */
+  gap: 30px; /* Space between icons */
+  margin-top: 40px; /* Space below the header */
 }
 
 /* Icon Styling */
 .social-links a {
   font-size: 2rem; /* Adjust icon size */
-  color: #00bfff; /* Electric blue for icons */
-  transition: color 0.3s, transform 0.3s;
+  color: #ffffff; /* White color for icons */
+  transition: color 0.3s, transform 0.3s; /* Smooth hover effect */
   text-decoration: none; /* Remove underline */
 }
 
 /* Hover Effects */
 .social-links a:hover {
-  color: #e0e1dd; /* Light gray when hovered */
+  color: #00bfff; /* Electric blue on hover */
   transform: scale(1.2); /* Slight zoom on hover */
 }
-
