@@ -112,3 +112,14 @@ body {
   color: #00bfff; /* Electric blue on hover */
   transform: scale(1.2); /* Slight zoom on hover */
 }
+
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it stays behind other content */
+  background-color: #fffff; /* Match your site's color palette */
+}
