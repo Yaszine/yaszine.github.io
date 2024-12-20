@@ -6,8 +6,13 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
 </head>
 <body>
+  <div id="particles-js"></div>
+  
+  
   <!-- Background -->
   <div class="background">
     <!-- Header Section -->
@@ -18,6 +23,33 @@
       </div>
     </section>
 
+
+   <script>
+    tsParticles.load("particles-js", {
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          onClick: { enable: true, mode: "push" },
+          resize: true,
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { quantity: 4 },
+        },
+      },
+      particles: {
+        color: { value: "#e0e1dd" },
+        links: { enable: true, color: "#415a77", distance: 150 },
+        move: { enable: true, speed: 2, direction: "none", random: false, straight: false },
+        number: { density: { enable: true, area: 800 }, value: 80 },
+        opacity: { value: 0.5 },
+        size: { value: 4, random: true },
+      },
+      detectRetina: true,
+    });
+  </script>
+    
     <div class="social-links">
       <a href="https://github.com/Yaszine" target="_blank" aria-label="GitHub">
         <i class="fab fa-github"></i>
