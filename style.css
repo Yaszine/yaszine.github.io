@@ -25,19 +25,20 @@ body {
 
 
 .title {
-  font-size: clamp(2rem, 5vw, 3rem); /* Dynamic sizing */
-}
-.animated-text {
-  animation: fade-in 3s infinite alternate;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
-@keyframes fade-in {
-  from {
-    color: transparent;
-  }
-  to {
-    color: #003566;
-  }
+.animated-text {
+  height: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #003566;
+  text-decoration: underline;
+  text-decoration-color: #003566; /* Electric blue */
+  text-decoration-thickness: 3px; /* Customize thickness */
+  text-underline-offset: 5px; /* Distance of underline from text */
 }
 
 /* Demos Section */
