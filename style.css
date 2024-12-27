@@ -123,3 +123,15 @@ body {
   z-index: -1; /* Ensure it stays behind other content */
   background-color: #fffff; /* Match your site's color palette */
 }
+
+.demo-card-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit;        /* Preserve text color */
+  display: inline-block;
+}
+
+.demo-card-link:hover .demo-card {
+  transform: scale(1.05); /* Optional hover effect */
+  transition: transform 0.2s ease-in-out;
+}
+
