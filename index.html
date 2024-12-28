@@ -26,7 +26,7 @@
 
    <script>
     tsParticles.load("particles-js", {
-      fpsLimit: 60,
+      fpsLimit: 30,
       interactivity: {
         events: {
           onHover: { enable: true, mode: "repulse" },
@@ -40,7 +40,7 @@
       },
       particles: {
         color: { value: "#e0e1dd" },
-        links: { enable: true, color: "#415a77", distance: 150 },
+        links: { enable: true, color: "#ffc300", distance: 150 },
         move: { enable: true, speed: 2, direction: "none", random: false, straight: false },
         number: { density: { enable: true, area: 800 }, value: 80 },
         opacity: { value: 0.5 },
@@ -130,7 +130,7 @@
 
       if (textPosition < currentText.length) {
         textElement.innerHTML += currentText.charAt(textPosition);
-        textElement.style.color = "#00bfff"; // Electric blue
+        textElement.style.color = "#ffc300"; // Electric blue
         textPosition++;
         setTimeout(typeEffect, 100);
       } else {
