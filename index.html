@@ -3,137 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Yassine Ben Jemaa | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-
 </head>
 <body>
   <div id="particles-js"></div>
   
-  
-  <!-- Background -->
-  <div class="background">
-    <!-- Header Section -->
-    <section class="intro">
-      <h1 class="title">Yassine Ben Jemaa</h1>
-      <div class="animated-text">
-        <span class="text"></span>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <h2 class="logo">Yassine Ben Jemaa</h2>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="title">Yassine Ben Jemaa</h1>
+    <p class="animated-text"><span class="text"></span></p>
+    <a href="#projects" class="cta-button">View My Work</a>
+  </section>
+
+  <!-- Social Links -->
+  <div class="social-links">
+    <a href="https://github.com/Yaszine" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/yassinebenjemaa/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="./resume.pdf" target="_blank" aria-label="Resume"><i class="fas fa-file-pdf"></i></a>
+    <a href="mailto:yass.benjemaa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Diffusion Models Inpainting">
+        <div class="card-content">
+          <h3>Diffusion Models Inpainting</h3>
+          <p>Generative AI, Guided Diffusion, Python, SMC</p>
+          <a href="https://github.com/Yaszine/HMM_code_MCGDiff" target="_blank" class="project-link">GitHub</a>
+        </div>
       </div>
-    </section>
-
-
-   <script>
-    tsParticles.load("particles-js", {
-      fpsLimit: 30,
-      interactivity: {
-        events: {
-          onHover: { enable: true, mode: "repulse" },
-          onClick: { enable: true, mode: "push" },
-          resize: true,
-        },
-        modes: {
-          repulse: { distance: 100, duration: 0.4 },
-          push: { quantity: 4 },
-        },
-      },
-      particles: {
-        color: { value: "#e0e1dd" },
-        links: { enable: true, color: "#ffc300", distance: 150 },
-        move: { enable: true, speed: 2, direction: "none", random: false, straight: false },
-        number: { density: { enable: true, area: 800 }, value: 80 },
-        opacity: { value: 0.5 },
-        size: { value: 4, random: true },
-      },
-      detectRetina: true,
-    });
-  </script>
-    
-    <div class="social-links">
-      <a href="https://github.com/Yaszine" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/yassinebenjemaa/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="./resume.pdf" target="_blank" aria-label="Resume">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a href="yass.benjemaa@gmail.com" aria-label="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Financial Risk Analysis">
+        <div class="card-content">
+          <h3>Financial Risk Analysis</h3>
+          <p>Deep Learning, Quantitative Risk Modeling</p>
+          <a href="https://github.com/Yaszine/GenAI_Finance" target="_blank" class="project-link">GitHub</a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Demos Section -->
-    <section class="demos">
-      <h2 class="section-title">Projects</h2>
-      <div class="demo-container">
-        
-        <!-- Demo 3 -->
-        <a href="https://github.com/Yaszine/HMM_code_MCGDiff" target="_blank" class="demo-card-link">
-        <div class="demo-card">
-          <i class="fas fa-paint-brush icon"></i>
-          <div class="demo-info">
-            <h3>Diffusion Models Inpainting</h3>
-            <p>Diffusion Models, Generative AI, Guided Diffusion,  Python, SMC, scientific literature.</p>
-          </div>
-        </div>
-         </a>
-        <!-- Demo 4 -->
-        <a href="./Causal_project.pdf" target="_blank" class="demo-card-link">
-          <div class="demo-card">
-              <i class="fas fa-code-branch icon"></i>
-              <div class="demo-info">
-                <h3>Causal Project</h3>
-                <p>TensorFlow, Causal Inference, GenerativeAI, Guided Diffusion, GoogleCollab, GPU.</p>
-              </div>
-            </div>
-          
-         </a>
-    
-  
-        <!-- Demo 5 -->
-        <a href="https://github.com/Yaszine/GenAI_Finance" target="_blank" class="demo-card-link">
-          <div class="demo-card">
-            <i class="fas fa-chart-line icon"></i>
-            <div class="demo-info">
-              <h3>Financial Risk Analysis</h3>
-              <p>TensorFlow, PyTorch, Generative AI, Deep Learning, Quantitative Risk Modeling.</p>
-            </div>
-          </div>
-        </a>
-
-      <!-- Demo 4 -->
-      <a href="https://github.com/Yaszine/Deep_Learning_projet" target="_blank" class="demo-card-link">
-        <div class="demo-card">
-          <i class="fas fa-paint-brush icon"></i>
-          <div class="demo-info">
-            <h3>Generative Models project</h3>
-            <p>Binary AlphaDigit, MNIST, Image Reconstruction, VAE, Deep Belief Networks.</p>
-          </div>
-        </div>
-      </a>
-
-
-      
-      <!-- Demo 6 -->
-        <a href="https://github.com/Yaszine/MichelinProject" target="_blank" class="demo-card-link">
-          <div class="demo-card">
-            <i class="fas fa-brain icon"></i>
-            <div class="demo-info">
-              <h3>Michelin Capstone(NDA)</h3>
-              <p>ML, Pytorch, RNN, GRU, LSTM, traditional physical models, time-series.</p>
-            </div>
-          </div>
-        </a>  
-        </div>
-      </section>
-    
-
-  <!-- JS for animated text -->
   <script>
-    const textArray = ["AI Enthusiast", "Machine Learning Engineer"];
+    // Animated Typing Effect
+    const textArray = ["AI Enthusiast", "Machine Learning Engineer", "Deep Learning Specialist"];
     let textPosition = 0;
     let arrayIndex = 0;
 
@@ -143,7 +68,7 @@
 
       if (textPosition < currentText.length) {
         textElement.innerHTML += currentText.charAt(textPosition);
-        textElement.style.color = "#ffc300"; // Electric blue
+        textElement.style.color = "#ffc300";
         textPosition++;
         setTimeout(typeEffect, 100);
       } else {
@@ -165,6 +90,13 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       setTimeout(typeEffect, 500);
+    });
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌞" : "🌙";
     });
   </script>
 </body>
