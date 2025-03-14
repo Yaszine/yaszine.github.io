@@ -11,7 +11,7 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <h2 class="logo">Yassine Ben Jemaa</h2>
+    <h2 class="logo">Yassine's Portfolio</h2>
   </nav>
 
   <!-- Hero Section -->
@@ -70,5 +70,41 @@
       </a>
     </div>
   </section>
+
+  <script>
+    // Animated Typing Effect
+    const textArray = ["AI Enthusiast", "Machine Learning Engineer", "Deep Learning Specialist"];
+    let textPosition = 0;
+    let arrayIndex = 0;
+
+    function typeEffect() {
+      const textElement = document.querySelector('.animated-text .text');
+      const currentText = textArray[arrayIndex];
+
+      if (textPosition < currentText.length) {
+        textElement.innerHTML += currentText.charAt(textPosition);
+        textPosition++;
+        setTimeout(typeEffect, 100);
+      } else {
+        setTimeout(eraseEffect, 1500);
+      }
+    }
+
+    function eraseEffect() {
+      const textElement = document.querySelector('.animated-text .text');
+      if (textElement.innerHTML.length > 0) {
+        textElement.innerHTML = textElement.innerHTML.slice(0, -1);
+        setTimeout(eraseEffect, 50);
+      } else {
+        textPosition = 0;
+        arrayIndex = (arrayIndex + 1) % textArray.length;
+        setTimeout(typeEffect, 500);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(typeEffect, 500);
+    });
+  </script>
 </body>
 </html>
