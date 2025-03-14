@@ -7,15 +7,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  <div id="particles-js"></div>
-  
   <!-- Navigation Bar -->
   <nav class="navbar">
     <h2 class="logo">Yassine Ben Jemaa</h2>
-    <button id="theme-toggle">🌙</button>
   </nav>
 
   <!-- Hero Section -->
@@ -37,67 +33,42 @@
   <section id="projects" class="projects">
     <h2 class="section-title">Projects</h2>
     <div class="project-container">
-      <div class="project-card">
-        <img src="project1.jpg" alt="Diffusion Models Inpainting">
+      <a href="https://github.com/Yaszine/HMM_code_MCGDiff" target="_blank" class="project-card">
+        <i class="fas fa-paint-brush icon"></i>
         <div class="card-content">
           <h3>Diffusion Models Inpainting</h3>
-          <p>Generative AI, Guided Diffusion, Python, SMC</p>
-          <a href="https://github.com/Yaszine/HMM_code_MCGDiff" target="_blank" class="project-link">GitHub</a>
+          <p>Diffusion Models, Generative AI, Guided Diffusion, Python, SMC, scientific literature.</p>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="project2.jpg" alt="Financial Risk Analysis">
+      </a>
+      <a href="./Causal_project.pdf" target="_blank" class="project-card">
+        <i class="fas fa-code-branch icon"></i>
+        <div class="card-content">
+          <h3>Causal Project</h3>
+          <p>TensorFlow, Causal Inference, Generative AI, Guided Diffusion, GoogleCollab, GPU.</p>
+        </div>
+      </a>
+      <a href="https://github.com/Yaszine/GenAI_Finance" target="_blank" class="project-card">
+        <i class="fas fa-chart-line icon"></i>
         <div class="card-content">
           <h3>Financial Risk Analysis</h3>
-          <p>Deep Learning, Quantitative Risk Modeling</p>
-          <a href="https://github.com/Yaszine/GenAI_Finance" target="_blank" class="project-link">GitHub</a>
+          <p>TensorFlow, PyTorch, Generative AI, Deep Learning, Quantitative Risk Modeling.</p>
         </div>
-      </div>
+      </a>
+      <a href="https://github.com/Yaszine/Deep_Learning_projet" target="_blank" class="project-card">
+        <i class="fas fa-paint-brush icon"></i>
+        <div class="card-content">
+          <h3>Generative Models Project</h3>
+          <p>Binary AlphaDigit, MNIST, Image Reconstruction, VAE, Deep Belief Networks.</p>
+        </div>
+      </a>
+      <a href="https://github.com/Yaszine/MichelinProject" target="_blank" class="project-card">
+        <i class="fas fa-brain icon"></i>
+        <div class="card-content">
+          <h3>Michelin Capstone (NDA)</h3>
+          <p>ML, Pytorch, RNN, GRU, LSTM, traditional physical models, time-series.</p>
+        </div>
+      </a>
     </div>
   </section>
-
-  <script>
-    // Animated Typing Effect
-    const textArray = ["AI Enthusiast", "Machine Learning Engineer", "Deep Learning Specialist"];
-    let textPosition = 0;
-    let arrayIndex = 0;
-
-    function typeEffect() {
-      const textElement = document.querySelector('.text');
-      const currentText = textArray[arrayIndex];
-
-      if (textPosition < currentText.length) {
-        textElement.innerHTML += currentText.charAt(textPosition);
-        textElement.style.color = "#ffc300";
-        textPosition++;
-        setTimeout(typeEffect, 100);
-      } else {
-        setTimeout(eraseEffect, 1500);
-      }
-    }
-
-    function eraseEffect() {
-      const textElement = document.querySelector('.text');
-      if (textElement.innerHTML.length > 0) {
-        textElement.innerHTML = textElement.innerHTML.slice(0, -1);
-        setTimeout(eraseEffect, 50);
-      } else {
-        textPosition = 0;
-        arrayIndex = (arrayIndex + 1) % textArray.length;
-        setTimeout(typeEffect, 500);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(typeEffect, 500);
-    });
-
-    // Dark Mode Toggle
-    const themeToggle = document.getElementById("theme-toggle");
-    themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌞" : "🌙";
-    });
-  </script>
 </body>
 </html>
