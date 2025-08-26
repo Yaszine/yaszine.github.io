@@ -386,11 +386,12 @@
       z-index: 0;
     }
     
-    .timeline-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
+   .timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  gap: 1rem;  /* 🔑 makes the date very close to the content */
     }
     
     .timeline-item:nth-child(odd) {
@@ -407,8 +408,8 @@
     }
     
     .timeline-date {
-      width: 100px;
-      height: 40px;
+      width: 80px;
+      height: 36px;
       background: var(--primary);
       color: white;
       display: flex;
@@ -416,18 +417,17 @@
       justify-content: center;
       border-radius: 50px;
       font-weight: 600;
-      position: relative;
-      top: 0;              /* Aligns vertically with content */
       z-index: 1;
+      flex-shrink: 0;   /* keeps the date from stretching */
     }
     
     .timeline-dot {
       position: absolute;
-      top: 50%;            /* Vertical center between content and date */
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: var(--primary);
       border: 4px solid var(--light);
