@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yassine Ben Jemaa | ML Engineer Portfolio</title>
+  <title>Yassine Ben Jemaa | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Global Styles */
     :root {
       --primary: #2563eb;
       --primary-dark: #1d4ed8;
@@ -415,6 +414,7 @@
       font-weight: 600;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 2;
     }
     
     .timeline-dot {
@@ -427,6 +427,7 @@
       border-radius: 50%;
       background: var(--primary);
       border: 4px solid var(--light);
+      z-index: 2;
     }
     
     /* Footer */
@@ -530,6 +531,30 @@
       .projects-grid {
         grid-template-columns: 1fr;
       }
+      
+      /* Improved timeline for mobile */
+      .timeline:before {
+        left: 20px;
+      }
+      
+      .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+      }
+      
+      .timeline-date {
+        left: 20px;
+        width: 100px;
+        font-size: 0.9rem;
+      }
+      
+      .timeline-dot {
+        left: 20px;
+      }
+      
+      .timeline-item {
+        margin-bottom: 5rem;
+      }
     }
     
     /* Animation Utilities */
@@ -568,7 +593,7 @@
     <div class="container hero-content">
       <h1 class="fade-in">Yassine Ben Jemaa</h1>
       <p class="hero-subtitle fade-in">Machine Learning Engineer & AI Researcher</p>
-      <p class="hero-description fade-in">I build intelligent systems that learn from data and solve complex problems. Passionate about generative AI, computer vision, NLP and pushing the boundaries of what's possible with machine learning.</p>
+      <p class="hero-description fade-in">I build intelligent systems that learn from data and solve complex problems. Passionate about generative AI, computer vision, and pushing the boundaries of what's possible with machine learning.</p>
       <div class="hero-btns fade-in">
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -625,7 +650,6 @@
               <span class="project-tag">TensorFlow</span>
               <span class="project-tag">Causal Inference</span>
               <span class="project-tag">Google Collab</span>
-              <span class="project-tag">GPU</span>
             </div>
             <a href="./Causal_project.pdf" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -638,12 +662,13 @@
           </div>
           <div class="project-content">
             <h3 class="project-title">ML Engineer at Koordinat</h3>
-            <p class="project-desc">Developed SaaS for satellite imagery analysis (under NDA).</p>
+            <p class="project-desc">Developed computer vision solutions for satellite imagery analysis (under NDA).</p>
             <div class="project-tags">
-              <span class="project-tag">Research</span>
-              <span class="project-tag">NLP</span>
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">YOLOv8</span>
               <span class="project-tag">Computer Vision</span>
             </div>
+            <a href="https://github.com/Yaszine/Satellite" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         
@@ -696,7 +721,7 @@
           </div>
         </div>
 
-        <!-- RAG Project (Added as requested) -->
+        <!-- RAG Project -->
         <div class="project-card fade-in" data-category="personal">
           <div class="project-img">
             <i class="fas fa-folder"></i>
@@ -732,7 +757,7 @@
             <p><strong>Engineering Degree, Telecom SudParis</strong></p>
             <p>Applied Mathematics, Statistics, Reinforcement Learning, Data Mining, Bayesian Estimation</p>
           </div>
-          <div class="timeline-date">2021-2024</div>
+          <div class="timeline-date">2018-2023</div>
           <div class="timeline-dot"></div>
         </div>
         
@@ -764,7 +789,7 @@
               <span class="project-tag">Data Preprocessing</span>
             </div>
           </div>
-          <div class="timeline-date">2024</div>
+          <div class="timeline-date">2023</div>
           <div class="timeline-dot"></div>
         </div>
         
@@ -780,7 +805,7 @@
               <span class="project-tag">ML Pipelines</span>
             </div>
           </div>
-          <div class="timeline-date">2024</div>
+          <div class="timeline-date">2023-2024</div>
           <div class="timeline-dot"></div>
         </div>
         
@@ -794,7 +819,6 @@
               <span class="project-tag">Generative AI</span>
               <span class="project-tag">SaaS</span>
               <span class="project-tag">Consulting</span>
-              <span class="project-tag">LLM</span>
             </div>
           </div>
           <div class="timeline-date">2025</div>
@@ -826,7 +850,7 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
-      <p class="copyright">© 2025 Yassine Ben Jemaa. All rights reserved.</p>
+      <p class="copyright">© 2023 Yassine Ben Jemaa. All rights reserved.</p>
     </div>
   </footer>
 
