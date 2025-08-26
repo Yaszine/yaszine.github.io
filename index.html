@@ -386,12 +386,11 @@
       z-index: 0;
     }
     
-   .timeline-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  gap: 1rem;  /* 🔑 makes the date very close to the content */
+      .timeline-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
     }
     
     .timeline-item:nth-child(odd) {
@@ -418,7 +417,13 @@
       border-radius: 50px;
       font-weight: 600;
       z-index: 1;
-      flex-shrink: 0;   /* keeps the date from stretching */
+      flex-shrink: 0;
+      margin-right: 1rem;       /* offset slightly from the main axis */
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date {
+      margin-right: 0;
+      margin-left: 1rem;        /* flip margin for odd rows */
     }
     
     .timeline-dot {
